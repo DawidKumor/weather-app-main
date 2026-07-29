@@ -27,134 +27,269 @@
     </style>
   </head>
   <body>
-  <a href="#main" class="visually-hidden">Skip to main content</a>
-    <header>
-      <a href="/">
-        <img src="/assets/images/logo.svg" alt="Weather now home" width="197" height="40">
-      </a>
-      <select name="units" id="units">
-        <option value="">Units</option>
-        <option value="Celcius">Caelcius</option>
-        <option value="Farenhait">Farenhait</option>
-      </select>
-    </header>
-   <main id="main">
-     <section class="hero">
-       <h1 class="hero__title">How's the sky
-         looking today?
-       </h1>
-       <div class="hero__search">
-         <input type="text" name="search" id="search" class="hero__textbox" placeholder="Search for a city" />
-         <button class="hero__button" type="submit">Search</button>
-       </div>
-     </section>
-     <section class="current">
-       <h2 class="visually-hidden">Current Location Temperature</h2>
-       <div class="current__weather">
-         <div class="current__location">
-           <div class="current__city">Berlin, Germany</div>
-           <div class="current__date">Tuesday, Aug 5, 2025</div>
-
-         </div>
-        <div class="current__icon"><img src="/assets/images/icon-sunny.webp" alt="" width="320" height="320" </div>
-         <div class="current__temp"><span>20</span>&Deg;</div>
-
-       </div>
-       <div class="current__conditions">
-      <div class="current__condition">
-        <p class="current__condition-title">Feels like</p>
-        <p id="feelsLike"class="current__condition-value">18&Deg;</p>
+    <a href="#main" class="visually-hidden skip-link">Skip to main content</a>
+    <header class="header wrapper">
+      <div class="header header__content">
+        <a class="header__homelink" href="/">
+          <img
+            class="header__logo"
+            src="/assets/images/logo.svg"
+            alt="Weather now home"
+            width="197"
+            height="40"
+          />
+        </a>
+        <select class="header__dropdown" name="units" id="units">
+          <option value="">Units</option>
+          <option value="Celcius">Caelcius</option>
+          <option value="Farenhait">Farenhait</option>
+        </select>
       </div>
-         <div class="current__condition">
-           <p class="current__condition-title">Humidity</p>
-           <p id="humidity" class="current__condition-value">46%</p>
-         </div>
-         <div class="current__condition">
-           <p class="current__condition-title">Wind</p>
-           <p id="wind" class="current__condition-value">14 km/h</p>
-         </div>
-         <div class="current__condition">
-           <p class="current__condition-title">Precipitation</p>
-           <p id="precipitation" class="current__condition-value">0 mm</p>
-         </div>
-       </div>
-
-     </section>
-     <section class="daily">
-       <h2 class="section__title daily__title">Daily forecast</h2>
-       <div class="daily__forecast">
-         <div class="daily__day">
-           <p class="daily__day-title">Tue</p>
-           <img src="/assets/images/icon-rain.webp" alt="" width="320" height="320">
-           <div class="daily__day-temps">
-             <p class="daily__day-high">20&Deg;</p>
-             <p class="daily__day-low">14&Deg;</p>
-           </div>
-         </div>
-         <div class="daily__day">
-           <p class="daily__day-title">Wed</p>
-           <img src="/assets/images/icon-rain.webp" alt="" width="320" height="320">
-           <div class="daily__day-temps">
-             <p class="daily__day-high">20&Deg;</p>
-             <p class="daily__day-low">14&Deg;</p>
-           </div>
-         </div>
-         <div class="daily__day">
-           <p class="daily__day-title">Thu</p>
-           <img src="/assets/images/icon-rain.webp" alt="" width="320" height="320">
-           <div class="daily__day-temps">
-             <p class="daily__day-high">20&Deg;</p>
-             <p class="daily__day-low">14&Deg;</p>
-           </div>
-         </div>
-         <div class="daily__day">
-           <p class="daily__day-title">Fri</p>
-           <img src="/assets/images/icon-rain.webp" alt="" width="320" height="320">
-           <div class="daily__day-temps">
-             <p class="daily__day-high">20&Deg;</p>
-             <p class="daily__day-low">14&Deg;</p>
-           </div>
-         </div>
-         <div class="daily__day">
-           <p class="daily__day-title">Sat</p>
-           <img src="/assets/images/icon-rain.webp" alt="" width="320" height="320">
-           <div class="daily__day-temps">
-             <p class="daily__day-high">20&Deg;</p>
-             <p class="daily__day-low">14&Deg;</p>
-           </div>
-         </div>
-         <div class="daily__day">
-           <p class="daily__day-title">Sun</p>
-           <img src="/assets/images/icon-rain.webp" alt="" width="320" height="320">
-           <div class="daily__day-temps">
-             <p class="daily__day-high">20&Deg;</p>
-             <p class="daily__day-low">14&Deg;</p>
-           </div>
-         </div>
-         <div class="daily__day">
-           <p class="daily__day-title">Tue</p>
-           <img src="/assets/images/icon-rain.webp" alt="" width="320" height="320">
-           <div class="daily__day-temps">
-             <p class="daily__day-high">20&Deg;</p>
-             <p class="daily__day-low">14&Deg;</p>
-           </div>
-         </div>
-       </div>
-     </section>
-     <section class="hourly">
-       
-     </section>
-   </main>
+    </header>
+    <main id="main">
+      <section class="hero wrapper">
+        <div class="hero__content">
+          <h1 class="hero__title">How's the sky looking today?</h1>
+          <div class="hero__search">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              class="hero__textbox"
+              placeholder="Search for a city"
+            />
+            <button class="hero__button" type="submit">Search</button>
+          </div>
+        </div>
+      </section>
+      <section class="current">
+        <h2 class="visually-hidden">Current Location Temperature</h2>
+        <div class="current__weather">
+          <div class="current__location">
+            <div class="current__city">Berlin, Germany</div>
+            <div class="current__date">Tuesday, Aug 5, 2025</div>
+          </div>
+          <div class="current__icon">
+            <img
+              src="/assets/images/icon-sunny.webp"
+              alt=""
+              width="320"
+              height="320"
+            />
+          </div>
+          <div class="current__temp"><span>20</span>&deg;</div>
+        </div>
+        <div class="current__conditions">
+          <div class="current__condition">
+            <p class="current__condition-title">Feels like</p>
+            <p id="feelsLike" class="current__condition-value">18&deg;</p>
+          </div>
+          <div class="current__condition">
+            <p class="current__condition-title">Humidity</p>
+            <p id="humidity" class="current__condition-value">46%</p>
+          </div>
+          <div class="current__condition">
+            <p class="current__condition-title">Wind</p>
+            <p id="wind" class="current__condition-value">14 km/h</p>
+          </div>
+          <div class="current__condition">
+            <p class="current__condition-title">Precipitation</p>
+            <p id="precipitation" class="current__condition-value">0 mm</p>
+          </div>
+        </div>
+      </section>
+      <section class="daily">
+        <h2 class="section__title daily__title">Daily forecast</h2>
+        <div class="daily__forecast">
+          <div class="daily__day">
+            <p class="daily__day-title">Tue</p>
+            <img
+              src="/assets/images/icon-rain.webp"
+              alt=""
+              width="320"
+              height="320"
+            />
+            <div class="daily__day-temps">
+              <p class="daily__day-high">20&deg;</p>
+              <p class="daily__day-low">14&deg;</p>
+            </div>
+          </div>
+          <div class="daily__day">
+            <p class="daily__day-title">Wed</p>
+            <img
+              src="/assets/images/icon-rain.webp"
+              alt=""
+              width="320"
+              height="320"
+            />
+            <div class="daily__day-temps">
+              <p class="daily__day-high">20&deg;</p>
+              <p class="daily__day-low">14&deg;</p>
+            </div>
+          </div>
+          <div class="daily__day">
+            <p class="daily__day-title">Thu</p>
+            <img
+              src="/assets/images/icon-rain.webp"
+              alt=""
+              width="320"
+              height="320"
+            />
+            <div class="daily__day-temps">
+              <p class="daily__day-high">20&deg;</p>
+              <p class="daily__day-low">14&deg;</p>
+            </div>
+          </div>
+          <div class="daily__day">
+            <p class="daily__day-title">Fri</p>
+            <img
+              src="/assets/images/icon-rain.webp"
+              alt=""
+              width="320"
+              height="320"
+            />
+            <div class="daily__day-temps">
+              <p class="daily__day-high">20&deg;</p>
+              <p class="daily__day-low">14&deg;</p>
+            </div>
+          </div>
+          <div class="daily__day">
+            <p class="daily__day-title">Sat</p>
+            <img
+              src="/assets/images/icon-rain.webp"
+              alt=""
+              width="320"
+              height="320"
+            />
+            <div class="daily__day-temps">
+              <p class="daily__day-high">20&deg;</p>
+              <p class="daily__day-low">14&deg;</p>
+            </div>
+          </div>
+          <div class="daily__day">
+            <p class="daily__day-title">Sun</p>
+            <img
+              src="/assets/images/icon-rain.webp"
+              alt=""
+              width="320"
+              height="320"
+            />
+            <div class="daily__day-temps">
+              <p class="daily__day-high">20&deg;</p>
+              <p class="daily__day-low">14&deg;</p>
+            </div>
+          </div>
+          <div class="daily__day">
+            <p class="daily__day-title">Tue</p>
+            <img
+              src="/assets/images/icon-rain.webp"
+              alt=""
+              width="320"
+              height="320"
+            />
+            <div class="daily__day-temps">
+              <p class="daily__day-high">20&deg;</p>
+              <p class="daily__day-low">14&deg;</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="hourly">
+        <div class="hourly__header">
+          <h2 class="section__title hourly__title">Hourly Forecast</h2>
+          <select name="hourly-day" id="hourly-day">
+            <option value="">Monday</option>
+          </select>
+          <div class="hourly__hours">
+            <div class="hourly__hour">
+              <img
+                class="hourly__hour-icon"
+                width="40"
+                height="40"
+                src="/assets/images/icon-rain.webp"
+                alt=""
+              />
+              <p class="hourly__hour-time">3 PM</p>
+              <p class="hourly__hour-temp">20&deg;</p>
+            </div>
+            <div class="hourly__hour">
+              <img
+                class="hourly__hour-icon"
+                width="40"
+                height="40"
+                src="/assets/images/icon-rain.webp"
+                alt=""
+              />
+              <p class="hourly__hour-time">3 PM</p>
+              <p class="hourly__hour-temp">20&deg;</p>
+            </div>
+            <div class="hourly__hour">
+              <img
+                class="hourly__hour-icon"
+                width="40"
+                height="40"
+                src="/assets/images/icon-rain.webp"
+                alt=""
+              />
+              <p class="hourly__hour-time">3 PM</p>
+              <p class="hourly__hour-temp">20&deg;</p>
+            </div>
+            <div class="hourly__hour">
+              <img
+                class="hourly__hour-icon"
+                width="40"
+                height="40"
+                src="/assets/images/icon-rain.webp"
+                alt=""
+              />
+              <p class="hourly__hour-time">3 PM</p>
+              <p class="hourly__hour-temp">20&deg;</p>
+            </div>
+            <div class="hourly__hour">
+              <img
+                class="hourly__hour-icon"
+                width="40"
+                height="40"
+                src="/assets/images/icon-rain.webp"
+                alt=""
+              />
+              <p class="hourly__hour-time">3 PM</p>
+              <p class="hourly__hour-temp">20&deg;</p>
+            </div>
+            <div class="hourly__hour">
+              <img
+                class="hourly__hour-icon"
+                width="40"
+                height="40"
+                src="/assets/images/icon-rain.webp"
+                alt=""
+              />
+              <p class="hourly__hour-time">3 PM</p>
+              <p class="hourly__hour-temp">20&deg;</p>
+            </div>
+            <div class="hourly__hour">
+              <img
+                class="hourly__hour-icon"
+                width="40"
+                height="40"
+                src="/assets/images/icon-rain.webp"
+                alt=""
+              />
+              <p class="hourly__hour-time">3 PM</p>
+              <p class="hourly__hour-temp">20&deg;</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     Units Switch to Imperial/Metric Temperature Celsius (°C) Fahrenheit (°F)
-    Wind Speed km/h mph Precipitation Millimeters (mm) Inches (in)  Search for a city, e.g., New York Search
+    Wind Speed km/h mph Precipitation Millimeters (mm) Inches (in) Search for a
+    city, e.g., New York Search
     <!-- Insert temperature here -->
-
 
     <!-- Insert humidity here -->
 
-
     <!-- Insert wind here -->
-
 
     <!-- Insert precipitation here -->
 
